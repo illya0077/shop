@@ -20,7 +20,7 @@ body{
     margin-right: auto;
 }
 
-.row::after, .menu:after{
+.row::after, .menu:after, .zagolovok:after, .products:after {
     content: "";
     display: block;
     clear: both;
@@ -77,6 +77,243 @@ body{
     margin-top: 7px;
 }
 
-.header-form-search{
+.poisk{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 800px;
+    position: relative;
+    top: 50%;
+    left: 0%;
+    margin-top: 5px;
+    padding: 5px;
     border: 1px solid rgb(44 113 184);
+}
+
+.search {
+    width: 160px;
+    height: 30px;
+    background-color: rgb(202, 219, 237, 0);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+    padding-left: 20px;
+    font-size: 21px;
+    font-weight: 300;
+    color: rgb(44 113 184);
+    border: 0;
+}
+
+::placeholder {
+    color: rgb(44 113 184);
+    font-weight: 300;
+    font-size: 21px;
+}
+
+.search:focus-visible {
+    outline: 0;
+}
+
+.btn-search{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    right: 4px;
+    padding: 0px;
+    background-color: rgb(44 113 184);
+    border: 0;
+    background-image: url(images/icon4.png);
+    background-repeat: no-repeat;
+    background-position: center;  
+    cursor: pointer; 
+
+}
+
+.btn-basket{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-top: 5px;
+    background-color: rgb(255 255 255);
+    border: 0;
+    background-image: url(images/icon1.png);
+    background-repeat: no-repeat;
+    background-position: center;  
+    cursor: pointer; 
+}
+
+.zaglyshka{
+    height: 845px;
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.mainnn{
+    padding-top: 20px;
+    padding-left: 18px;
+
+}
+
+.Laptops-zagolovok{
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.zagolovok li{
+    float: left;
+}
+
+.zagolovok{
+    margin-bottom: 50px;
+    margin-left: -19px;
+}
+
+.sort{
+    margin-left: 167px;
+    margin-top: 4px;
+    width: 270px;
+    height: 40px;
+    border: 1px solid white;
+    background-color: rgb(44 113 184);
+    color: white;
+    font-size: 21px;
+    font-weight: lighter;
+    padding-left: 20px;
+
+}
+
+.device{
+    width: 270px;
+    height: 650px;
+    border: 1px solid white;
+    background-color: rgb(44, 113, 184, 0.75);
+
+}
+
+ul.products li.device {
+    position: relative;
+    float: left;
+    margin: 0 30px 30px 0;
+
+}
+
+.device-right{
+    margin: 0 !important;
+}
+
+.opis-device1{
+    padding: 15px;
+    color: white;
+    font-size: 21px;
+    font-weight: lighter;
+}
+
+.zagolovok-device{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.device1{
+    width: 268px;
+    height: 180px;
+    background-color: rgba(255, 255, 255, 0.75);
+
+}
+
+.img-device{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    margin-left: -52px;
+    
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+.price{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.btn-more-details{
+    width: 210px;
+    height: 50px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -105px;
+    color: white;
+    font-size: 21;
+    font-weight: bold;
+    background-color: rgb(44, 113, 184);
+    border: 1px solid white;
+
+
+}
+
+.btn-add-to-cart{
+    width: 210px;
+    height: 50px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -80px;
+    font-size: 21;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid white;
+}
+
+
+
+.bord {
+    border-left: solid 1px rgb(44 113 184);
+}
+
+.Products2{
+    position: absolute;
+    z-index: 10;
+    width: 142px;
+    opacity: 0; 
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    margin-top: -2px;
+    margin-left: -41px;
+}
+
+.Products2 > li{
+    font-size: 21px;
+    background-color:rgb(44 113 184);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding-left: 30px;
+    width: 285px;
+    margin: 0;
+}
+
+li:hover > .Products2{
+    transform: none;
+    visibility: visible;
+    opacity: 1; 
+}
+
+.Products:hover {
+    background-color: rgb(44 113 184);
+    color: rgb(255, 255, 255);
+}
+
+.Products2 > li:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(44 113 184);
 }

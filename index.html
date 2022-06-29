@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
+
     <header class="header">
         <div class="container">
             <div class="row">
@@ -22,9 +23,17 @@
                 <div class="col-md-6">
                     <nav>
                         <ul class="menu">
-                            <li><a href="">Home 1</a></li>
-                            <li><a href="">Products 2</a>
-                           
+                            <li><a href="">Home</a></li>
+                            <li class="bord Products"><a class="home Products" href="">Products</a>
+                                <ul class="Products2">
+                                    <li><a href="">Lorem ipsum dolor</a></li>
+                                    <li><a href="">Sit amet</a></li>
+                                    <li><a href="">Consectetur adipisicing</a></li>
+                                    <li><a href="">Tempor incididunt</a></li>
+                                    <li><a href="">Dolore magna aliqua</a></li>
+                                    <li><a href="">Ut enim ad minim veniam</a></li>
+                                    <li><a href="">Quis nostrud</a></li>
+                                </ul>
                             </li>
                             <li><a href="">Payment</a></li>
                             <li><a href="">Shipping</a></li>
@@ -34,20 +43,109 @@
                 <div class="col-md-3">
                     <div class="row">
                         <div class="col-md-9">
-                            <form class="header-form-search" action="">
-
+                            <form class="poisk" action="">
+                                <input class="search" placeholder="search" type="text">
+                                <button class="btn-search" type="submit"></button>
                             </form>
                         </div>
-                        <div class="col-md-3">tryrtyrty</div>
+                        <div class="col-md-3">
+                            <button class="btn-basket"></button>
+                        </div>
                     </div>
-                    
-                </div>
+                                </div>
             </div>
         </div>
     </header>
+
+
+
     <main class="main">
-        <div class="container">Main</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="zaglyshka"></div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="mainnn">
+
+                        <div>
+                            <ul class="zagolovok">
+                                <li><p class="Laptops-zagolovok">Laptops and Tablets</p></li>
+                                <li><label for="sort"></label>
+                                    <select class="sort" name="" id="">
+                                        <option value="sort by price">sort by price</option>
+                                        <option value="sort by name">sort by name</option>
+                                        <option value="sort by date">sort by date</option>
+                                        <option value="sort by popularity">sort by popularity</option>
+                                    </select></li>
+                            </ul>                       
+                        </div>
+
+                        <div class="row">
+                            <div>
+                                <ul class="products">
+                                    <li class="device ">
+                                        <div class="device1">
+                                            <img class="img-device" src="images/device1.png" alt="">
+                                        </div>
+                                        
+                                        <div class="opis-device1">
+                                            <span class="zagolovok-device">#1 Device Name</span> 
+                                            <br><br><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> 
+                                            <br><br><span><span class="bold-text">TYPE:</span>  Laptop</span> 
+                                            <br><br><span><span class="bold-text">SCREEN SIZE:</span> 7 inches</span>
+                                            <br><br><span><span class="bold-text">RAM:</span> 1GB </span>
+
+                                            <div class="price">$599 25 </div>
+
+                                            <button class="btn-more-details">MORE DETAILS</button>
+                                            <button class="btn-add-to-cart">ADD TO CART</button>
+
+                                        </div>                                     
+                                                                               
+                                    </li>
+                                    <li class="device">
+                                        
+                                    </li>
+                                    <li class="device device-right">
+                                    
+                                    </li>
+                                    <li class="device">
+                                        
+                                    </li>
+                                    <li class="device">
+                                        
+                                    </li>
+                                    <li class="device device-right">
+                                    
+                                    </li>
+                                    <li class="device">
+                                        
+                                    </li>
+                                    <li class="device">
+                                        
+                                    </li>
+                                    <li class="device device-right">
+                                    
+                                    </li>
+                                </ul>
+                            </div>
+                            
+
+                        </div>
+                        
+                        
+                    </div>
+                        
+                </div>
+
+            </div>
+        </div>
     </main>
+
+
+
     <footer class="footer">
         <div class="container">Footer</div>
     </footer>
