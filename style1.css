@@ -20,6 +20,7 @@ body{
     margin-right: auto;
 }
 
+
 .row::after, .menu:after, .zagolovok:after, .products:after {
     content: "";
     display: block;
@@ -36,13 +37,29 @@ body{
     width: 25%;
 }
 
+.col-md-4{
+    width: 33.33333%;
+}
+
 .col-md-6{
     width: 50%;
+}
+
+.col-md-8{
+    width: 66.66667%;
 }
 
 .col-md-9{
     width: 75%;
 }
+
+.col-md-12{
+    width: 100%;
+}
+
+
+
+/**************************************** ОСНОВНЕ МЕНЮ /****************************************/
 
 .header{
     padding: 25px 0;
@@ -77,6 +94,88 @@ body{
     margin-top: 7px;
 }
 
+.Products{
+    position: relative;
+}
+
+.arrow {
+    border: solid #2c71b8;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    top: 21px;
+    right: 14px;
+}
+
+li:hover .arrow {
+    border-color:  white;
+}
+
+
+/************************************* ВИПАДАЮЧЕ МЕНЮ /****************************************/
+.bord {
+    border-left: solid 1px rgb(44 113 184);
+}
+
+.Products2{
+    position: absolute;
+    z-index: 10;
+    opacity: 0; 
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    margin-top: -2px;
+    margin-left: -1px;
+    width: 302px;
+
+}
+
+.Products2 > li{
+    font-size: 21px;
+    background-color:rgb(44 113 184);
+    color: rgb(white);
+    text-align: left;
+    margin: 0;
+    width: 302px;
+
+}
+
+.Products2 a{
+    font-size: 21px;
+    text-align: left;
+    padding-left: 32px;
+    color: white;
+
+
+}
+
+li:hover > .Products2{
+    transform: none;
+    visibility: visible;
+    opacity: 1; 
+}
+
+.Products2 a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(44 113 184);
+        
+}
+
+li.Products-menu:hover > a {
+    background-color:rgb(44 113 184);
+    color: rgb(255, 255, 255);
+}
+
+.Products2 li:first-child{
+    padding-top: 28px;
+}
+
+
+
+/*************************************** search / cart /***************************************/
+
 .poisk{
     width: 100%;
     height: 40px;
@@ -86,6 +185,7 @@ body{
     top: 50%;
     left: 0%;
     margin-top: 5px;
+    margin-left: 15px;
     padding: 5px;
     border: 1px solid rgb(44 113 184);
 }
@@ -98,11 +198,12 @@ body{
     top: 50%;
     left: 0;
     margin-top: -15px;
-    padding-left: 20px;
     font-size: 21px;
     font-weight: 300;
     color: rgb(44 113 184);
     border: 0;
+    padding-left: 20px;
+
 }
 
 ::placeholder {
@@ -133,10 +234,12 @@ body{
 }
 
 .btn-basket{
+    position: relative;
     width: 40px;
     height: 40px;
     padding: 0;
     margin-top: 5px;
+    margin-left: 10px;
     background-color: rgb(255 255 255);
     border: 0;
     background-image: url(images/icon1.png);
@@ -145,175 +248,359 @@ body{
     cursor: pointer; 
 }
 
-.zaglyshka{
-    height: 845px;
-    background-color: rgb(255, 255, 255, 0.2);
+.header-cart{
+    position: relative;
+    width: 40px;
+    height: 40px;
 }
 
-.mainnn{
-    padding-top: 20px;
-    padding-left: 18px;
+.kilkist-tovary{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(44 113 184);
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+
+/***************************************  filtr***************************************/
+
+.filtr{
+    background-color: rgb(255, 255, 255, 0.25);
+    width: 270px;
+    height: 840px;
+    border-right: 1px solid rgb(255, 255, 255);
+    position: relative;
+}
+
+.device_type, .color, .ramm{
+    padding: 30px 0 0 30px;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.color, .ramm{
+    padding-top: 60px;
+}
+
+label::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    border:1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 23px;
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background-color: rgb(255, 255, 255);
+}
+
+label{
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.show-more-options{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.show-more-options a{
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+}
+
+.show-more-options a:hover{
+    color: #2c71b8;
+}
+
+.submit{
+    width: 210px;
+    height: 50px;
+    background-color: rgb(44 113 184);
+    border: 1px solid rgb(255, 255, 255, 1);
+    font-weight: bold;
+    font-size: 21px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 11%;
+    margin-top: 30px;
+}
+
+.submit:hover{
+    background-color: rgb(44, 113, 184, 0.75);
+    border: none;
+}
+
+/**************************************** breadcrumbs /****************************************/
+
+.breadcrumbs{
+    margin: 28px 0;
+    font-size: 14px;
+    color: rgb(150 184 220);
+}
+
+.breadcrumbs a{
+    text-decoration: none;
+    color: rgb(150 184 220);
 
 }
 
-.Laptops-zagolovok{
-    color: rgb(255, 255, 255);
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+h1{
     font-size: 48px;
     font-weight: bold;
+    color: rgb(255 255 255);
+    margin-bottom: 25px;
 }
 
-.zagolovok li{
-    float: left;
-}
+/******************************************* sort /*********************************************/
 
-.zagolovok{
-    margin-bottom: 50px;
-    margin-left: -19px;
-}
-
-.sort{
-    margin-left: 167px;
-    margin-top: 4px;
+.sort-by-select {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-top: 5px;
     width: 270px;
     height: 40px;
-    border: 1px solid white;
+    font-size: 21px;
+    text-align: left;
+    line-height: 40px;
+    border: 1px solid rgb(255 255 255);
     background-color: rgb(44 113 184);
     color: white;
-    font-size: 21px;
-    font-weight: lighter;
-    padding-left: 20px;
-
-}
-
-.device{
-    width: 270px;
-    height: 650px;
-    border: 1px solid white;
-    background-color: rgb(44, 113, 184, 0.75);
-
-}
-
-ul.products li.device {
-    position: relative;
-    float: left;
-    margin: 0 30px 30px 0;
-
-}
-
-.device-right{
-    margin: 0 !important;
-}
-
-.opis-device1{
-    padding: 15px;
-    color: white;
-    font-size: 21px;
-    font-weight: lighter;
-}
-
-.zagolovok-device{
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.device1{
-    width: 268px;
-    height: 180px;
-    background-color: rgba(255, 255, 255, 0.75);
-
-}
-
-.img-device{
-    position: absolute;
-    top: 7%;
-    left: 50%;
-    margin-left: -52px;
+    vertical-align: text-top ;
     
 }
 
-.bold-text{
-    font-weight: bold;
-}
-
-.price{
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 25px;
-}
-
-.btn-more-details{
-    width: 210px;
-    height: 50px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    position: relative;
-    top: 0;
-    left: 50%;
-    margin-left: -105px;
-    color: white;
-    font-size: 21;
-    font-weight: bold;
-    background-color: rgb(44, 113, 184);
-    border: 1px solid white;
-
-
-}
-
-.btn-add-to-cart{
-    width: 210px;
-    height: 50px;
-    position: relative;
-    top: 0;
-    left: 50%;
-    margin-left: -80px;
-    font-size: 21;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.25);
-    border: 1px solid white;
-}
-
-
-
-.bord {
-    border-left: solid 1px rgb(44 113 184);
-}
-
-.Products2{
+.sort-by-select:after {
+    content: "";
     position: absolute;
-    z-index: 10;
-    width: 142px;
-    opacity: 0; 
-    transform-origin: 0% 0%;
-    transform: rotateX(-90deg);
-    margin-top: -2px;
-    margin-left: -41px;
+    left: 240px;
+    top: 13px;
+    border: solid rgb(255 255 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
-.Products2 > li{
+.sort-by-item {
+    display: block;
+    padding-left: 20px;
     font-size: 21px;
-    background-color:rgb(44 113 184);
-    color: rgb(255, 255, 255);
     text-align: left;
-    padding-left: 30px;
-    width: 285px;
-    margin: 0;
+    text-transform: full-width  ;
+    color: white;
+    
 }
 
-li:hover > .Products2{
+.sort-by-current, .sort-by-item, .sort-by-select {
+    cursor: pointer;
+}
+
+.sort-by-list {
+    display: none;
+    position: absolute;
+    border: 1px solid #e0e0e0;
+}
+
+.sort-by-list li:hover  {
     transform: none;
     visibility: visible;
     opacity: 1; 
 }
 
-.Products:hover {
-    background-color: rgb(44 113 184);
-    color: rgb(255, 255, 255);
+ul {
+    list-style: none;
 }
 
-.Products2 > li:hover{
-    background-color: rgb(255, 255, 255);
-    color: rgb(44 113 184);
+
+/***************************************** product /*********************************************/
+
+.product-image{
+    position: relative;
+    width: 270px;
+    height: 180px;
+    background-color:rgba(255, 255, 255, 0.75);  
 }
+
+.img-device{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.zoom{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(44 113 184);
+    background-image: url(images/zoom-blue.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    right: 10px;
+    top: 10px;
+}
+
+.zoom:hover{
+    background: rgb(44 113 184);
+    background-image: url(images/zoom-white.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.like{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(44 113 184);
+    background-image: url(images/like-blue.png) ;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    right: 10px;
+    top: 50px;
+}
+
+.like:hover{
+    background: rgb(44 113 184);
+    background-image: url(images/like-white.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.product-body{
+    width: 270px;
+    height: 470px;
+    background-color: rgb(44, 113, 184, 0.75);
+    padding: 18px;
+    border: 1px solid rgb(255, 255, 255, 0.75);
+}
+
+.product-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.product-descr{
+    font-size: 21px;
+    font-weight: 300;
+    color: white;
+    padding-top: 12px;
+}
+
+.product-features, .screen, .ram{
+    font-weight: bold;
+    font-weight: 300;
+    color: white;
+    padding-top: 12px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.product-price{
+    font-weight: bold;
+    font-size: 48px;
+    color: white;
+    padding: 15px;
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+.btn-more-details{
+    width: 210px;
+    height: 50px;
+    background-color: rgb(44 113 184);
+    border: 1px solid rgb(255, 255, 255, 1);
+    font-weight: bold;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 22px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.btn-add-to-cart{
+    width: 210px;
+    height: 50px;
+    background-color: rgb(44 113 184);
+    border: 1px solid rgb(255, 255, 255, 1);
+    font-weight: bold;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.product{
+    margin-bottom: 30px;
+}
+
+.btn-add-to-cart:hover, .btn-more-details:hover{
+    background-color: rgb(255, 255, 255, 0.2);
+    border: none;
+}
+
+.load-more{
+    color: wheat;
+    font-size: 36px;
+    text-align: center;
+
+}
+
+.load-more a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.load-more a:hover{
+    font-weight: 600;
+}
+
+/***************************************** footer /*********************************************/
+
+.footer {
+    background-color: rgb(255, 255, 255, 0.75);
+    margin-top: 2500px;
+    width: 100%;
+    height: 100px;
+    font-size: 21px;
+    color: rgb(44 113 184);
+    text-align: center;
+    line-height: 100px;
+  }
