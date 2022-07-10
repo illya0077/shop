@@ -20,7 +20,6 @@ body{
     margin-right: auto;
 }
 
-
 .row::after, .menu:after, .zagolovok:after, .products:after, .sort-title:after {
     content: "";
     display: block;
@@ -168,6 +167,11 @@ li.home:hover > a {
 
 .Products2 li:first-child{
     padding-top: 28px;
+}
+
+li.Products-menu:hover > a{
+    background-color:rgb(44 113 184);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -373,76 +377,74 @@ h1{
 
 /******************************************* sort /*********************************************/
 
-    .sort-by-select{
-        position: relative;
-    }
-    .sort-by-list{
-        position: relative;
-        z-index: 10;
-        opacity: 0; 
-        transform-origin: 0% 0%;
-        transform: rotateX(-90deg);
-        margin-top: -2px;
-        margin-left: -1px;
-        width: 270px;
-        height: 40px;
+.sort-by-select{
+    position: relative;
+}
+.sort-by-list{
+    position: relative;
+    z-index: 10;
+    opacity: 0; 
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    margin-top: -2px;
+    margin-left: -1px;
+    width: 270px;
+    height: 40px;
+}
     
-    }
+.sort-by-list > li, .sort-title > li{
+    font-size: 21px;
+    background-color:rgb(44 113 184);
+    color: rgb(white);
+    text-align: left;
+    width: 270px;
+    height: 40px;
+    border: 1px solid white;
+    line-height: 40px;
+    margin-top: -1px;
+}
     
-    .sort-by-list > li, .sort-title > li{
-        font-size: 21px;
-        background-color:rgb(44 113 184);
-        color: rgb(white);
-        text-align: left;
-        width: 270px;
-        height: 40px;
-        border: 1px solid white;
-        line-height: 40px;
-        margin-top: -1px;
+.sort-by-list a, .sort-title a{
+    display: block;
+    font-size: 21px;
+    text-align: left;
+    padding-left: 15px;
+    color: white;
+    text-decoration: none;
+}
     
-    }
+li:hover > .sort-by-list{
+    transform: none;
+    visibility: visible;
+    opacity: 1; 
+}
     
-    .sort-by-list a, .sort-title a{
-        display: block;
-        font-size: 21px;
-        text-align: left;
-        padding-left: 15px;
-        color: white;
-        text-decoration: none;
-    }
-    
-    li:hover > .sort-by-list{
-        transform: none;
-        visibility: visible;
-        opacity: 1; 
-    }
-    
-    .sort-title a:hover{
-        background-color: rgb(255, 255, 255);
-        color: rgb(44 113 184);  
-    }
+.sort-title a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(44 113 184);  
+}
 
-    .sort-by-list a:hover{
-        background-color: rgb(255, 255, 255);
-        color: rgb(44 113 184);  
-    }
+.sort-by-list a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(44 113 184);  
+}
 
-    .arrow2 {
-        position: absolute;
-        border: solid #ffffff;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 4px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        top: 13px;
-        right: 15px;
-    }
+.arrow2 {
+    position: absolute;
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: 13px;
+    right: 15px;
+}
 
-    .arrow2:hover{
-        border: solid rgb(44 113 184);
+.arrow2:hover{
+    border: solid rgb(44 113 184);
 
-    }
+}
 
 /***************************************** product /*********************************************/
 
