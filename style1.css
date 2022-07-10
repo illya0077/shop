@@ -21,7 +21,7 @@ body{
 }
 
 
-.row::after, .menu:after, .zagolovok:after, .products:after {
+.row::after, .menu:after, .zagolovok:after, .products:after, .sort-title:after {
     content: "";
     display: block;
     clear: both;
@@ -147,8 +147,6 @@ li:hover .arrow {
     text-align: left;
     padding-left: 32px;
     color: white;
-
-
 }
 
 li:hover > .Products2{
@@ -163,7 +161,7 @@ li:hover > .Products2{
         
 }
 
-li.Products-menu:hover > a {
+li.home:hover > a {
     background-color:rgb(44 113 184);
     color: rgb(255, 255, 255);
 }
@@ -375,66 +373,76 @@ h1{
 
 /******************************************* sort /*********************************************/
 
-.sort-by-select {
-    position: relative;
-    display: inline-block;
-    padding-left: 20px;
-    margin-top: 5px;
-    width: 270px;
-    height: 40px;
-    font-size: 21px;
-    text-align: left;
-    line-height: 40px;
-    border: 1px solid rgb(255 255 255);
-    background-color: rgb(44 113 184);
-    color: white;
-    vertical-align: text-top ;
+    .sort-by-select{
+        position: relative;
+    }
+    .sort-by-list{
+        position: relative;
+        z-index: 10;
+        opacity: 0; 
+        transform-origin: 0% 0%;
+        transform: rotateX(-90deg);
+        margin-top: -2px;
+        margin-left: -1px;
+        width: 270px;
+        height: 40px;
     
-}
-
-.sort-by-select:after {
-    content: "";
-    position: absolute;
-    left: 240px;
-    top: 13px;
-    border: solid rgb(255 255 255);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.sort-by-item {
-    display: block;
-    padding-left: 20px;
-    font-size: 21px;
-    text-align: left;
-    text-transform: full-width  ;
-    color: white;
+    }
     
-}
+    .sort-by-list > li, .sort-title > li{
+        font-size: 21px;
+        background-color:rgb(44 113 184);
+        color: rgb(white);
+        text-align: left;
+        width: 270px;
+        height: 40px;
+        border: 1px solid white;
+        line-height: 40px;
+        margin-top: -1px;
+    
+    }
+    
+    .sort-by-list a, .sort-title a{
+        display: block;
+        font-size: 21px;
+        text-align: left;
+        padding-left: 15px;
+        color: white;
+        text-decoration: none;
+    }
+    
+    li:hover > .sort-by-list{
+        transform: none;
+        visibility: visible;
+        opacity: 1; 
+    }
+    
+    .sort-title a:hover{
+        background-color: rgb(255, 255, 255);
+        color: rgb(44 113 184);  
+    }
 
-.sort-by-current, .sort-by-item, .sort-by-select {
-    cursor: pointer;
-}
+    .sort-by-list a:hover{
+        background-color: rgb(255, 255, 255);
+        color: rgb(44 113 184);  
+    }
 
-.sort-by-list {
-    display: none;
-    position: absolute;
-    border: 1px solid #e0e0e0;
-}
+    .arrow2 {
+        position: absolute;
+        border: solid #ffffff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 4px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        top: 13px;
+        right: 15px;
+    }
 
-.sort-by-list li:hover  {
-    transform: none;
-    visibility: visible;
-    opacity: 1; 
-}
+    .arrow2:hover{
+        border: solid rgb(44 113 184);
 
-ul {
-    list-style: none;
-}
-
+    }
 
 /***************************************** product /*********************************************/
 
